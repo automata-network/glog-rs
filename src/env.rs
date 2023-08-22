@@ -1,8 +1,5 @@
 use std::prelude::v1::*;
 
-#[cfg(feature = "tstd")]
-use env_logger_sgx as env_logger;
-
 use crate::{LevelFilter, ReqId};
 use chrono::{DateTime, NaiveDateTime, Utc};
 use env_logger::Env;

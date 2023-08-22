@@ -1,10 +1,5 @@
-#[cfg(feature = "tstd")]
-use log_sgx as _log;
-#[cfg(feature = "std")]
-use ::log as _log;
-
 // dependency injection
-pub use _log::*;
+pub use log::*;
 
 pub fn is_enable(target: &str) -> bool {
     __private_api_enabled(Level::Debug, target)
