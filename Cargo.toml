@@ -1,0 +1,26 @@
+[package]
+name = "glog"
+version = "0.1.0"
+authors = ["Automata Team"]
+edition = "2021"
+license = "Apache-2.0"
+
+[features]
+default               = ["std"]
+
+std                   = ["env_logger/std", "log/std", "value-bag", "rand"]
+tstd                  = ["env_logger/tstd", "log/tstd", "sgxlib/tstd", "sgxlib/types"]
+
+[dependencies]
+sgxlib                = { optional = true, git = "https://github.com/automata-network/sgxlib", default-features = false }
+
+log                = { optional = true, git = "https://github.com/automata-network/sgxlib-thirdparty", default-features = false }
+
+value-bag             = { optional = true, version = "=1.0.0-alpha.8" }
+
+env_logger            = { optional = true, git = "https://github.com/automata-network/sgxlib-thirdparty", default-features = false }
+
+hex                   = { version = "0.4", default-features = false, features = ["alloc"] }
+chrono                = { version = "0.4.19", default-features = false, features = ["alloc"] }
+rand                  = { optional = true, version = "0.8.5" }
+
