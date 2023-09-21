@@ -1,6 +1,6 @@
 # Geode Log 
 
-[![License](https://img.shields.io/badge/license-Apache-green.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-Apache2-green.svg)](LICENSE)
 
 
 ## Acknowledgments
